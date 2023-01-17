@@ -17,9 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+//frontend route
+Route::get('/', 'FrontendController@index');
 
 
 Route::get('/products', [ProductController::class, 'index'])->name('product.index');
