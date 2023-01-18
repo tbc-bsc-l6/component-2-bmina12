@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -17,12 +18,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+//Route::get('/', function () {
+   // return view('welcome');
+//});
+
+Route::get('/', [HomeController::class, 'index']);
+
+
 
 //frontend route
-Route::get('/', 'FrontendController@index');
+//Route::get('/', 'FrontendController@index');
 
 
 Route::get('/products', [ProductController::class, 'index'])->name('product.index');
