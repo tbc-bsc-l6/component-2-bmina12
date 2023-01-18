@@ -17,13 +17,26 @@ class ProductController extends Controller
 
 
 
-    public function index()
+    public function index(Request $request)
     {
+        //Search
+
+
+        $search = $request['search']?? "";
+        if ($search != ""){
+            $product = Product::where('title', 'LIKE', "%$search%")->orWhere('id', 'LIKE', "%$search%")->get();
+        }else{
+            $product = Product::all();
+        }
+       // $product = compact('product', 'search');
+        return view('product.index',compact('product', 'search'));
+
+
         // return all products
 
-        $products =  $this->product->getAllProducts();
+        // $product =  $this->product->getAllProducts();
 
-        return view('product.index')->with('products', $products);
+        // return view('product.index')->with('products', $products);
 
     }
 
