@@ -30,7 +30,7 @@
             <textarea class="form-control" name="description" id="description" placeholder="Enter Description"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Create Product</button>
+          <button style="background-color: pink;" type="submit" class="btn btn-primary">Create Product</button>
 
     </form>
 

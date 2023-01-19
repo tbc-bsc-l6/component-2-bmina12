@@ -23,10 +23,8 @@ use Illuminate\Support\Facades\Route;
    // return view('welcome');
 //});
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/', [LinkController::class, 'index']);
-
-
+// Route::get('/', [HomeController::class, 'index']);
+Route::get('/',[LinkController::class, 'index']);
 
 //frontend route
 //Route::get('/', 'FrontendController@index');
@@ -56,7 +54,7 @@ Route::post('/products/{id}', [CommentController::class, 'addComment']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 //Route::get('/admin/products', [AdminController::class, 'adminShowAllProduct'])->name('admin.product.index');

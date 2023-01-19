@@ -118,7 +118,7 @@ class ProductController extends Controller
 
         $this->product->updateProduct($id, $data);
 
-        return redirect('/products');
+        return redirect('/admin/products');
 
     }
 }

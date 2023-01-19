@@ -40,7 +40,7 @@
           </div>
           @endforeach
       </div>
-    <!--div class="row">
+    <div class="row">
         <div class="col-md-6" style="display:flex">
             @foreach ($product as $products)
             <div class="card m-2 p-2" style="width: 18rem;">
@@ -55,8 +55,8 @@
               </div>
             @endforeach
         </div>
-    </!--div>
+    </div>
 </div>
---!
+
 
 @endsection

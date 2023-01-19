@@ -23,7 +23,7 @@ class AdminMiddleware
             if(Auth::user()->role_as == '1') {
                 return $next($request);
             } else {
-                return  redirect('/home')->with('message', 'Access Denied As You are not An Admin');
+                return  redirect('/')->with('message', 'Access Denied As You are not An Admin');
             }
         }
 
