@@ -19,7 +19,7 @@ class ProductFactory extends Factory
         $product_name = $this->faker->unique()->words($nb=2,$asText=true);
         return [
             //to create fake data
-            'picture' => 'product-'.$this->faker->numberBetween(1,10).'.jpg',
+            'picture' => 'product-'.$this->faker->numberBetween(1,10).'.png',
             'title' => $product_name,
             'price' => $this->faker->numberBetween(10,500),
             'description' => $this->faker->text(50),

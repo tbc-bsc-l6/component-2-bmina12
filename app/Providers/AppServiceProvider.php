@@ -6,6 +6,7 @@ use App\Repository\AdminRepository;
 use App\Repository\IAdminRepository;
 use App\Repository\IProductRepository;
 use App\Repository\ProductRepository;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -29,5 +30,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        Paginator::useBootstrap();
     }
 }

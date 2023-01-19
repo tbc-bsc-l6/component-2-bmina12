@@ -80,7 +80,7 @@ class ProductController extends Controller
 
         $this->product->createProduct($data);
 
-        return redirect('/products');
+        return redirect('/admin/products');
 
     }
 
